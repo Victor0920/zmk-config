@@ -1,8 +1,8 @@
 // Copyright (c) 2022 The ZMK Contributors
 // SPDX-License-Identifier: MIT
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20    // default: 10
 
 
 #include <behaviors.dtsi>
@@ -48,14 +48,6 @@
             bindings = <&kp>, <&kp>;
         };
     };
-
-    //     conditional_layers {
-    //     compatible = "zmk,conditional-layers";
-    //     mouse_layer {
-    //         if-layers = <1 2>;
-    //         then-layer = <3>;
-    //     };
-    // };
 
     keymap {
         compatible = "zmk,keymap";
@@ -103,7 +95,7 @@
             &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │ VOL DOWN │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  ?       │
-            &kp DEL    &kp N4    &kp K_VOL_DN &kp K_VOL_UP  &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp UNDER
+            &kp DEL &kp BACKSLASH    &kp K_VOL_DN &kp K_VOL_UP  &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp QMARK
         //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
             &trans     &trans     &trans    &kp LG(LS(5))   &kp LG(LS(4))      &kp LA(H)  &kp LA(J)   &kp LA(K) &kp LA(L)  &kp LA(M)
@@ -121,7 +113,7 @@
             &trans     &trans     &trans     &mo 4      &trans          &trans         &mkp MB4        &trans          &mkp MB5        &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
         //│          │          │          │          │          │   │               │               │               │               │               │
-            &trans     &trans     &trans     &trans     &trans         &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
+            &trans     &trans     &trans     &trans     &trans         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
         //│          │          │          │          │          │   │ SCROLL LEFT   │ SCROLL UP     │ SCROLL DOWN   │ SCROLL RIGHT  │               │
             &trans     &trans     &trans     &trans    &trans          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT &trans
