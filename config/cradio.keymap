@@ -125,22 +125,25 @@
         };
 
         // 2
-        // left_layer {
-        //     bindings = <
-        // //╭──────────┬──────────┬──────────┬──────────────┬──────────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        // //│          │          │          │              │              │   │          │          │          │          │          │
-        //     &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
-        // //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        // //│          │          │ VOL DOWN │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  `       │
-        //     &kp DEL    &kp N4    &kp K_VOL_DN &kp K_VOL_UP  &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
-        // //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        // //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
-        //     &trans     &trans     &trans    &kp LGUI(LS(5)) &kp LGUI(LS(4))    &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
-        // //╰──────────┴──────────┴──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-        //                                      &trans         &trans             &kp ENTER  &tog 4
-        // //                                 ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
-        //     >;
-        // };
+        left_layer {
+            bindings = <
+        //╭──────────┬──────────┬──────────┬──────────────┬──────────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│          │          │          │              │              │   │          │          │          │          │          │
+            &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
+        //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │ VOL DOWN │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  `       │
+            // &kp DEL    &kp N4    &kp K_VOL_DN &kp K_VOL_UP  &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
+            &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
+        //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
+            // &trans     &trans     &trans    &kp LGUI(LS(5)) &kp LGUI(LS(4))    &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+            &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
+        //╰──────────┴──────────┴──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                             // &trans         &trans             &kp ENTER  &tog 4
+                                               &trans     &trans     &trans     &trans
+        //                                 ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
+            >;
+        };
 
         // 3
         tri_layer {
