@@ -146,7 +146,7 @@
         //│          │          │          │          │          │   │ SCROLL LEFT   │ SCROLL UP     │ SCROLL DOWN   │ SCROLL RIGHT  │               │
             &trans     &trans     &trans     &trans    &trans          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-                                             &tog 4     &trans         &kp LCLK        &kp RCLK
+                                             &tog 4     &trans         &mkp LCLK        &mkp RCLK
         //                                 ╰──────────┴──────────╯   ╰───────────────┴───────────────╯
             >;
         };
