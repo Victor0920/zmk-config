@@ -3,7 +3,6 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
-#define CONFIG_ZMK_POINTING=y
 
 
 #include <behaviors.dtsi>
@@ -50,13 +49,13 @@
         };
     };
 
-        conditional_layers {
-        compatible = "zmk,conditional-layers";
-        mouse_layer {
-            if-layers = <1 2>;
-            then-layer = <3>;
-        };
-    };
+    //     conditional_layers {
+    //     compatible = "zmk,conditional-layers";
+    //     mouse_layer {
+    //         if-layers = <1 2>;
+    //         then-layer = <3>;
+    //     };
+    // };
 
     keymap {
         compatible = "zmk,keymap";
@@ -91,7 +90,7 @@
         //│ {            │  }             │  [            │  ]            │  |       │   │ `               │ 7        │ 8        │ 9        │ ; and :  │ 
             SHFTM(LBRC)    &kp RBRC         &kp LBKT        &kp RBKT        &kp PIPE       &kp GRAVE         &kp N7     &kp N8      &kp N9    &kp SEMI
         //╰──────────────┴────────────────┴───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┴──────────┴──────────╯
-                                                            &trans          &kp SPACE      &trans            &trans
+                                                            &tog 3          &kp SPACE      &trans            &tog 3 
         //                                                ╰───────────────┴──────────╯   ╰─────────────────┴──────────╯
             >;
         };
@@ -109,7 +108,7 @@
         //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
             &trans     &trans     &trans    &kp LG(LS(5))   &kp LG(LS(4))      &kp LA(H)  &kp LA(J)   &kp LA(K) &kp LA(L)  &kp LA(M)
         //╰──────────┴──────────┴──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans         &trans             &kp ENTER  &trans
+                                             &tog 3         &trans             &kp ENTER  &tog 3 
         //                                 ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
             >;
         };
