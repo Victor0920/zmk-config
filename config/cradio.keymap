@@ -131,12 +131,11 @@
         //│          │          │          │              │              │   │          │          │          │          │          │
             &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │ VOL DOWN │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  `       │
-            &kp DEL    &kp N4    &kp K_VOL_DN &kp K_VOL_UP  &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
+        //│          │          │ VOL DOWN │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  ?       │
+            &kp DEL    &kp N4    &kp K_VOL_DN &kp K_VOL_UP  &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp UNDER
         //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
-            // &trans     &trans     &trans    &kp LGUI(LS(5)) &kp LGUI(LS(4))    &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
-            &trans     &trans     &trans     &trans         &trans             &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+            &trans     &trans     &trans    &kp LG(LS(5))   &kp LG(LS(4))      &kp LA(H)  &kp LA(J)   &kp LA(K) &kp LA(L)  &LA(M)
         //╰──────────┴──────────┴──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans         &trans             &kp ENTER  &tog 4
         //                                 ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
