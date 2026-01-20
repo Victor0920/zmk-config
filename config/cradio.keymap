@@ -114,7 +114,7 @@
             &kp LS(1)      &kp RA(2)        &kp RA(3)       &kp LS(4)       &kp LS(5)      &kp AT            &kp N1     &kp N2     &kp N3     &kp N0
         //├──────────────┼────────────────┼───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┼──────────┼──────────┤
         //│ &            │  /             │  (            │  )            │ =        │   │ '               │ 4        │ 5        │ 6        │  + LT(*) │
-            HRML(LS(6),    LS(7),           LS(8))          &kp LS(9)       &kp RPAR       &kp SINGLE_QUOTE  &kp N4     HRMR(N5,        N6,         RBKT)
+            HRML(LS(6),    LS(7),           LS(8))          &kp LS(9)       &kp RPAR       &kp SINGLE_QUOTE  &kp N4     HRMR(N5,       N6,        RBKT)
         //├──────────────┼────────────────┼───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┼──────────┼──────────┤
         //│ {            │  }             │  [            │  ]            │  |       │   │ `               │ 7        │ 8        │ 9        │ LT LT(GT)│ 
             SHFTM(LA(SQT)) &kp RA(BSLH)    &kp RA(LBKT)   &kp RA(RBKT)    &kp RA(1)        &kp LBKT          &kp N7     &kp N8      &kp N9     SHFTM(GRAVE)
@@ -132,7 +132,7 @@
             &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│          │          │ VOL DOWN │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  `       │
-            &kp DEL    &kp N4    &kp K_VOL_DN &kp K_VOL_UP  &kp K_PP             &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT   &kp SEMI
+            &kp DEL    &kp N4    &kp K_VOL_DN &kp K_VOL_UP  &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI
         //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
             &trans     &trans     &trans    &kp LGUI(LS(5)) &kp LGUI(LS(4))    &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
@@ -161,21 +161,21 @@
         };
 
         // 4
-        mouse_layer {
-            bindings = <
-        //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-        //│          │          │          │          │          │   │               │ BACK          │               │ FORWARD       │               │
-            &trans     &trans     &trans     &trans     &trans          &trans         &mkp MB4        &trans          &mkp MB5        &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-        //│          │          │          │          │          │   │               │               │               │               │               │
-            &trans     &trans     &trans     &trans     &trans         &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
-        //│          │          │          │          │          │   │ SCROLL LEFT   │ SCROLL UP     │ SCROLL DOWN   │ SCROLL RIGHT  │               │
-            &trans     &trans     &trans     &trans    &trans          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT &trans
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-                                             &tog 4     &trans         &kp LCLK        &kp RCLK
-        //                                 ╰──────────┴──────────╯   ╰───────────────┴───────────────╯
-            >;
-        };
+        // mouse_layer {
+        //     bindings = <
+        // //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
+        // //│          │          │          │          │          │   │               │ BACK          │               │ FORWARD       │               │
+        //     &trans     &trans     &trans     &trans     &trans          &trans         &mkp MB4        &trans          &mkp MB5        &trans
+        // //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
+        // //│          │          │          │          │          │   │               │               │               │               │               │
+        //     &trans     &trans     &trans     &trans     &trans         &mmv MOVE_LEFT  &mmv MOVE_UP    &mmv MOVE_DOWN  &mmv MOVE_RIGHT &trans
+        // //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
+        // //│          │          │          │          │          │   │ SCROLL LEFT   │ SCROLL UP     │ SCROLL DOWN   │ SCROLL RIGHT  │               │
+        //     &trans     &trans     &trans     &trans    &trans          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT &trans
+        // //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
+        //                                      &tog 4     &trans         &kp LCLK        &kp RCLK
+        // //                                 ╰──────────┴──────────╯   ╰───────────────┴───────────────╯
+        //     >;
+        // };
     };
 };
