@@ -95,7 +95,7 @@
             HRML(A,        S,         D)     &kp F      &kp G          &kp H      &kp J      HRMR(K,         L,        SQT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ ,        │ .        │ -        │
-           &ht LSHFT z &kp X     &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &ht RSHFT FSLH
+            SHFTM(z)   &kp X     &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    SHFTM(FSLH)
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             &lt 2 ESC   &kp SPACE     &kp ENTER  &lt 1 BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
@@ -113,9 +113,9 @@
             HRML(LS(6),    LS(7),           LS(8))          &kp LS(9)       &kp RPAR       &kp SINGLE_QUOTE  &kp 4      HRMR(5,        6,         RBKT)
         //├──────────────┼────────────────┼───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┼──────────┼──────────┤
         //│ {            │  }             │  [            │  ]            │  |       │   │ `               │ 7        │ 8        │ 9        │ LT LT(GT)│ 
-          &ht LSHFT LA(SQT) &kp RA(BSLH)    &kp RA(LBKT)   &kp RA(RBKT)    &kp RA(1)      &kp LBKT          &kp 7      &kp 8      &kp 9      &kp GRAVE
+            SHFTM(LA(SQT)) &kp RA(BSLH)    &kp RA(LBKT)   &kp RA(RBKT)    &kp RA(1)        &kp LBKT          &kp 7      &kp 8      &kp 9     SHFTM(GRAVE)
         //╰──────────────┴────────────────┴───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┴──────────┴──────────╯
-                                                            &tog 4          &kp SPACE        &trans     &trans
+                                                            &tog 4          &kp SPACE      &trans            &trans
         //                                                ╰───────────────┴──────────╯   ╰─────────────────┴──────────╯
             >;
         };
