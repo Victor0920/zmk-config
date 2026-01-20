@@ -50,13 +50,13 @@
         };
     };
 
-    // conditional_layers {
-    //     compatible = "zmk,conditional-layers";
-    //     tri_layer {
-    //         if-layers = <1 2>;
-    //         then-layer = <3>;
-    //     };
-    // };
+        conditional_layers {
+        compatible = "zmk,conditional-layers";
+        tri_layer {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -91,7 +91,7 @@
         //│ {            │  }             │  [            │  ]            │  |       │   │ `               │ 7        │ 8        │ 9        │ ; and :  │ 
             SHFTM(LBRC)    &kp RBRC         &kp LBKT        &kp RBKT        &kp PIPE       &kp GRAVE         &kp N7     &kp N8      &kp N9    &kp SEMI
         //╰──────────────┴────────────────┴───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┴──────────┴──────────╯
-                                                            &tog 3          &kp SPACE      &trans            &trans
+                                                            &trans          &kp SPACE      &trans            &trans
         //                                                ╰───────────────┴──────────╯   ╰─────────────────┴──────────╯
             >;
         };
@@ -109,7 +109,7 @@
         //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
             &trans     &trans     &trans    &kp LG(LS(5))   &kp LG(LS(4))      &kp LA(H)  &kp LA(J)   &kp LA(K) &kp LA(L)  &kp LA(M)
         //╰──────────┴──────────┴──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans         &trans             &kp ENTER  &tog 3
+                                             &trans         &trans             &kp ENTER  &trans
         //                                 ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
             >;
         };
