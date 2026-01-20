@@ -136,11 +136,11 @@
             &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
         //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
-            // &trans     &trans     &trans    &kp LGUI(LS(5)) &kp LGUI(LS(4))    &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
-            &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
+            &trans     &trans     &trans    &kp LGUI(LS(5)) &kp LGUI(LS(4))    &kp AMPS   &kp UNDER  &kp PLUS   &kp PIPE   &trans
+            // &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
         //╰──────────┴──────────┴──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             // &trans         &trans             &kp ENTER  &tog 4
-                                               &trans     &trans     &trans     &trans
+                                             &trans         &trans             &kp ENTER  &tog 4
+                                               // &trans     &trans     &trans     &trans
         //                                 ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
             >;
         };
