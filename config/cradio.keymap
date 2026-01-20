@@ -10,10 +10,10 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // keys
-// Shift    LSHFT
-// Option   LALT
-// Control  LCTRL
-// Command  LGUI
+// Shift    LSHFT - LS()
+// Option   LALT  - LA()
+// Control  LCTRL - RC()
+// Command  LGUI  - LG()
 
 // (  LS(8)
 // )  LS(9)
@@ -136,6 +136,7 @@
         //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
             &trans     &trans     &trans    &kp LG(LS(5))   &kp LG(LS(4))      &kp LA(H)  &kp LA(J)   &kp LA(K) &kp LA(L)  &LA(M)
+            &trans     &trans     &trans    &trans  &trans &kp LA(H)  &kp LA(J)   &kp LA(K) &kp LA(L)  &LA(M)
         //╰──────────┴──────────┴──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans         &trans             &kp ENTER  &tog 4
         //                                 ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
