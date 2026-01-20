@@ -3,6 +3,8 @@
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600  // default: 600
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
+#define CONFIG_ZMK_POINTING=y
+
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -85,7 +87,7 @@
             &kp EXCL       &kp AT           &kp POUND       &kp DLLR        &kp PRCNT      &kp DQT           &kp N1     &kp N2     &kp N3     &kp N0
         //├──────────────┼────────────────┼───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┼──────────┼──────────┤
         //│ &            │  /             │  (            │  )            │ =        │   │ '               │ 4        │ 5        │ 6        │  + LT(*) │
-            HRML(AMPS,      AMPS,            LPAR)          &kp RPAR       &kp EQUAL       &kp SQT           &kp N4     HRMR(N5,       N6,        PLUS)
+            HRML(AMPS,      FSLH,            LPAR)          &kp RPAR       &kp EQUAL       &kp SQT           &kp N4     HRMR(N5,       N6,        PLUS)
         //├──────────────┼────────────────┼───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┼──────────┼──────────┤
         //│ {            │  }             │  [            │  ]            │  |       │   │ `               │ 7        │ 8        │ 9        │ ; and :  │ 
             SHFTM(LBRC)    &kp RBRC         &kp LBKT        &kp RBKT        &kp PIPE2      &kp GRAVE         &kp N7     &kp N8      &kp N9    &kp SEMI
