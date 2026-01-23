@@ -63,9 +63,9 @@
             HRML(A,        S)     &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  z       │  x       │  c       │  v       │  b       │   │  n       │  m       │ , and lt │ . and gt │ shft     │
-            SHFTM(z)   &kp X      &kp C      &kp V      &kp B          &kp N      &kp N      &kp COMMA  &kp DOT    &kp RSFHT
+            SHFTM(z)   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp RSFHT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            CMDM(esc)  &lt 2 space    &lt 1 enter &kp bspc
+                                            CMDM(ESC)  &lt 2 space    &lt 1 enter &kp bspc
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -99,7 +99,7 @@
             &kp DEL   &kp BACKSLASH &kp K_VOL_DN       &kp K_VOL_UP   &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp QMARK
         //├──────────┼──────────┼────────────────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  *       │   ^      │ EMOJI              │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
-            &kp ASTRK  &kp CARET  &LCTRL(LGUI(SPACE))  &kp LGUI(LS(5)) &kp LGUI(LS(4))   &kp LA(H)  &kp LA(J)  &kp LA(K)  &kp LA(L)  &kp LA(M)
+            &kp ASTRK  &kp CARET  &kp LCTRL(LGUI(SPACE)) &kp LGUI(LS(5)) &kp LGUI(LS(4)) &kp LA(H)  &kp LA(J)  &kp LA(K)  &kp LA(L)  &kp LA(M)
         //╰──────────┴──────────┴────────────────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                        &tog 3         &trans             &kp ENTER  &tog 3 
         //                                           ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
