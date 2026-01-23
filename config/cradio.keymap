@@ -62,8 +62,8 @@
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ; and :  │
             HRML(A,        S)     &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  z       │  x       │  c       │  v       │  b       │   │  n       │  m       │ , and <  │ . and >  │ shft     │
-            SHFTM(z)   &kp x      &kp c      &kp v      &kp b          &kp n      &kp m      &kp comma  &kp dot    &kp RSFHT
+        //│  z       │  x       │  c       │  v       │  b       │   │  n       │  m       │ , and lt │ . and gt │ shft     │
+            SHFTM(z)   &kp X      &kp C      &kp V      &kp B          &kp N      &kp N      &kp COMMA  &kp DOT    &kp RSFHT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                             CMDM(esc)  &lt 2 space    &lt 1 enter &kp bspc
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
