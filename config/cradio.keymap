@@ -32,9 +32,10 @@
 
 
 // Home row mods macro
-#define HRML(k1,k2,k3) &ht LCTRL k1  &ht LALT k2  &ht LGUI k3
+#define HRML(k1,k2) &ht LCTRL k1 &ht LALT k2
 #define HRMR(k1,k2,k3) &ht RGUI k1  &ht RALT k2  &ht RCTRL k3
 #define SHFTM(k1) &ht LSHFT k1
+#define CMDM(k1) &ht LGUI k1
 
 / {
     behaviors {
@@ -58,18 +59,18 @@
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
-            HRML(A,        S,         D)     &kp F      &kp G          &kp H      &kp J      HRMR(K,         L,        SQT)
+        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ; and :  │
+            HRML(A,        S)     &kp D     &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , and <  │ . and >  │ ; and :  │
-            SHFTM(Z)   &kp X     &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    SHFTM(SEMI)
+        //│  z       │  x       │  c       │  v       │  b       │   │  n       │  m       │ , and <  │ . and >  │ shft     │
+            SHFTM(z)   &kp x     &kp c      &kp v      &kp b          &kp n      &kp m      &kp comma  &kp dot     &kp RSFHT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            &lt 2 ESC   &kp SPACE     &kp ENTER  &lt 1 BSPC
+                                            CMDM(esc)  &lt 2 space    &lt 1 enter &kp bspc
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
 
-        // 1
+        // 1 (activated with right thumb)
         right_layer {
             bindings = <
         //╭──────────────┬────────────────┬───────────────┬───────────────┬──────────╮   ╭─────────────────┬──────────┬──────────┬──────────┬──────────╮
@@ -80,28 +81,28 @@
             HRML(AMPS,      FSLH,            LPAR)          &kp RPAR       &kp EQUAL       &kp SQT           &kp N4     HRMR(N5,       N6,        PLUS)
         //├──────────────┼────────────────┼───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┼──────────┼──────────┤
         //│ {            │  }             │  [            │  ]            │  |       │   │ `               │ 7        │ 8        │ 9        │ - and _  │
-            SHFTM(LBRC)    &kp RBRC         &kp LBKT        &kp RBKT        &kp PIPE       &kp GRAVE         &kp N7     &kp N8      &kp N9    SHFTM(MINUS)
+           SHFTM(LBRC)    &kp RBRC         &kp LBKT        &kp RBKT        &kp PIPE       &kp GRAVE         &kp N7     &kp N8      &kp N9    SHFTM(MINUS)
         //╰──────────────┴────────────────┴───────────────┼───────────────┼──────────┤   ├─────────────────┼──────────┼──────────┴──────────┴──────────╯
                                                             &tog 3          &kp SPACE      &trans            &tog 3 
         //                                                ╰───────────────┴──────────╯   ╰─────────────────┴──────────╯
             >;
         };
 
-        // 2
+        // 2 (activated with left thumb)
         left_layer {
             bindings = <
-        //╭──────────┬──────────┬──────────┬──────────────┬──────────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │          │              │              │   │          │          │          │          │          │
-            &trans     &trans     &trans     &trans         &trans             &trans     &trans     &trans     &trans    &trans
-        //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │          │ VOL DOWN │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  ?       │
-            &kp DEL &kp BACKSLASH    &kp K_VOL_DN &kp K_VOL_UP  &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp QMARK
-        //├──────────┼──────────┼──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│ TAB SWTCH│          │          │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
-            &trans     &trans     &trans    &kp LG(LS(5))   &kp LG(LS(4))      &kp LA(H)  &kp LA(J)   &kp LA(K) &kp LA(L)  &kp LA(M)
-        //╰──────────┴──────────┴──────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &tog 3         &trans             &kp ENTER  &tog 3 
-        //                                 ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
+        //╭──────────┬──────────┬────────────────────┬──────────────┬──────────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
+        //│  TAB     │          │                    │              │              │   │          │          │          │          │          │
+            &kp TAB    &trans     &trans               &trans         &trans             &trans     &trans     &trans     &trans     &trans 
+        //├──────────┼──────────┼────────────────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│          │          │ VOL DOWN           │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  ?       │
+            &kp DEL &kp BACKSLASH    &kp K_VOL_DN      &kp K_VOL_UP  &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp QMARK
+        //├──────────┼──────────┼────────────────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
+        //│  *       │   ^      │ EMOJI              │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
+            &kp ASTRK  &kp CARET  &LCTRL(LGUI(SPACE))  &kp LGUI(LS(5))   &kp LGUI(LS(4))      &kp LA(H)  &kp LA(J)   &kp LA(K) &kp LA(L)  &kp LA(M)
+        //╰──────────┴──────────┴────────────────────┼────────────────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
+                                                       &tog 3         &trans             &kp ENTER  &tog 3 
+        //                                           ╰────────────────────────┴──────────────╯   ╰──────────┴──────────╯
             >;
         };
 
@@ -109,22 +110,22 @@
         mouse_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭───────────────┬───────────────┬───────────────┬───────────────┬───────────────╮
-        //│          │          │          │          │          │   │               │ BACK          │               │ FORWARD       │               │
-            &trans     &trans     &trans     &mo 4      &trans          &trans         &mkp MB4        &trans          &mkp MB5        &trans
+        //│          │          │          │ SYS LYR  │          │   │  BACK         │  U            │               │ FORWARD       │               │
+            &trans     &trans     &trans     &mo 4      &trans          &mkp MB4       &kp U           &trans          &mkp MB5        &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
         //│          │          │          │          │          │   │               │               │               │               │               │
-            &trans     &trans     &trans     &trans     &trans         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &trans
+            &trans     &trans     &kp D     &trans     &trans         &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT &trans
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┼───────────────┼───────────────┤
         //│          │          │          │          │          │   │ SCROLL LEFT   │ SCROLL UP     │ SCROLL DOWN   │ SCROLL RIGHT  │               │
-            &trans     &trans     &trans     &trans    &trans          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT &trans
+            &kp Z      &kp X     &kp C       &kp V      &kp B          &msc SCRL_LEFT  &msc SCRL_UP    &msc SCRL_DOWN  &msc SCRL_RIGHT &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├───────────────┼───────────────┼───────────────┴───────────────┴───────────────╯
-                                             &tog 3     &trans         &mkp LCLK        &mkp RCLK
+                                             &tog 3     &kp LGUI     &mkp LCLK        &mkp RCLK
         //                                 ╰──────────┴──────────╯   ╰───────────────┴───────────────╯
             >;
         };
 
         // 4
-        tri_layer {
+        sys_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│ RESET    │          │          │          │PROFILE 0 │   │          │          │          │          │  RESET   │
