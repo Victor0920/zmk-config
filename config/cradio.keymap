@@ -93,7 +93,7 @@
             bindings = <
         //╭──────────┬──────────┬────────────────────┬──────────────┬──────────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
         //│  TAB     │          │                    │              │              │   │          │          │          │          │          │
-            &kp TAB    &trans     &trans               &trans         &trans             &trans     &trans     &trans     &trans     &trans 
+            &kp TAB    &trans     &KP LGUI             &kp TAB       &trans              &trans     &trans     &trans     &trans     &trans
         //├──────────┼──────────┼────────────────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CPS LCK  │          │ VOL DOWN           │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  ?       │
           &kp CAPSLOCK &kp BACKSLASH &kp K_VOL_DN       &kp K_VOL_UP   &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp QMARK
