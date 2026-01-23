@@ -92,14 +92,14 @@
         left_layer {
             bindings = <
         //╭──────────┬──────────┬────────────────────┬──────────────┬──────────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│  TAB     │          │                    │              │              │   │          │          │          │          │          │
-            &kp TAB    &trans     &KP LGUI             &kp TAB       &trans              &trans     &trans     &trans     &trans     &trans
+        //│  TAB     │          │                    │              │              │   │          │          │ SCRN FULL│          │          │
+            &kp TAB    &trans     &KP LGUI             &kp TAB       &trans              &trans     &trans     &kp LA(M)  &trans     &trans
         //├──────────┼──────────┼────────────────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│ CPS LCK  │          │ VOL DOWN           │  VOL UP      │  PLY/PAU     │   │  LEFT    │  DOWN    │  UP      │  RIGHT   │  ?       │
           &kp CAPSLOCK &kp BACKSLASH &kp K_VOL_DN       &kp K_VOL_UP   &kp K_PP           &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp QMARK
         //├──────────┼──────────┼────────────────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  *       │   ^      │ EMOJI              │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SCRN FULL│
-            &kp ASTRK  &kp CARET  &kp LC(LG(SPACE))    &kp LG(LS(N5)) &kp LG(LS(N4))     &kp LA(H)  &kp LA(J)  &kp LA(K)  &kp LA(L)  &kp LA(M)
+        //│  LSFT    │ FIND     │ EMOJI              │ SCRNREC      │ SCRNSHOT     │   │ SCRN LEFT│ SCRN DOWN│ SCRN UP  │ SCRN DOWN│ SHFT     │
+            &kp LSHFT &kp LG(SPACE) &kp LC(LG(SPACE))  &kp LG(LS(N5)) &kp LG(LS(N4))     &kp LA(H)  &kp LA(J)  &kp LA(K)  &kp LA(L)  &kp RSFT
         //╰──────────┴──────────┴────────────────────┼──────────────┼──────────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                                        &tog 3         &trans             &kp ENTER  &tog 3 
         //                                           ╰──────────────┴──────────────╯   ╰──────────┴──────────╯
