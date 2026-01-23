@@ -60,7 +60,7 @@
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ; and :  │
-            HRML(A,        S)     &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      SEMI
+            HRML(A,        S)     &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      &kp SEMI
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  z       │  x       │  c       │  v       │  b       │   │  n       │  m       │ , and lt │ . and gt │ shft     │
             SHFTM(Z)   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp RSFT
