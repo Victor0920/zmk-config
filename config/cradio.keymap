@@ -43,21 +43,15 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <220>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
-        // test
-        my_lt: my_layer_tap {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            tapping-term-ms = <180>;
-            quick-tap-ms = <150>;
-            require-prior-idle-ms = <100>;
-            bindings = <&mo>, <&kp>;
-        };
+    };
+
+    &lt {
+        tapping-term-ms = <180>;
     };
 
     keymap {
@@ -75,7 +69,7 @@
         //│  z       │  x       │  c       │  v       │  b       │   │  n       │  m       │ , and lt │ . and gt │ shft     │
             SHFTM(Z)   &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp RSFT
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                            CMDM(ESC)  &my_lt 2 SPACE &my_lt 1 ENTER &kp BSPC
+                                            CMDM(ESC)  &lt 2 SPACE    &lt 1 ENTER &kp BSPC
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
