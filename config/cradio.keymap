@@ -50,6 +50,7 @@
         };
     };
 
+    // lt test
     &lt {
         tapping-term-ms = <180>;
     };
