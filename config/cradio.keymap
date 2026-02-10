@@ -37,6 +37,10 @@
 #define SHFTM(k1) &ht LSHFT k1
 #define CMDM(k1) &ht LGUI k1
 
+&lt {
+    tapping-term-ms = <180>;
+};
+
 / {
     behaviors {
         ht: hold_tap {
@@ -49,12 +53,7 @@
             bindings = <&kp>, <&kp>;
         };
     };
-
-    // lt test
-    &lt {
-        tapping-term-ms = <180>;
-    };
-
+    
     keymap {
         compatible = "zmk,keymap";
         // 0
