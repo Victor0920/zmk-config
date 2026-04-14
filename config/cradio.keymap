@@ -17,7 +17,7 @@
 // Home row mods macro
 #define HRML(k1,k2) &ht LCTRL k1 &ht LALT k2
 #define SHFTM(k1) &ht LSHFT k1
-#define CMDM(k1) &ht LGUI k1
+#define CMDM(k1) &cmd_ht LGUI k1
 
 &lt {
     tapping-term-ms = <180>;
@@ -29,6 +29,15 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
+            tapping-term-ms = <180>;
+            quick-tap-ms = <150>;
+            require-prior-idle-ms = <100>;
+            bindings = <&kp>, <&kp>;
+        };
+        cmd_ht: cmd_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
             tapping-term-ms = <180>;
             quick-tap-ms = <150>;
             require-prior-idle-ms = <100>;
